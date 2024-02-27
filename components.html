@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="ar" dir="ltr">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css"
+    integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous">
+
+  <title>Components</title>
+
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .card {
+      width: 250px;
+      margin: 20px;
+      background-color: #333;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(19, 18, 18, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+      color: #fff;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .button {
+      background-color: #616661;
+      color: #f1eeee;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #222224;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-section {
+      margin-bottom: 20px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var previousScroll = 0;
+
+      $(window).scroll(function () {
+        var currentScroll = $(this).scrollTop();
+
+        if (currentScroll > previousScroll) {
+          // Scrolling down
+          $(".navbar").css("top", "-60px"); // Adjust the value as needed
+        } else {
+          // Scrolling up
+          $(".navbar").css("top", "0");
+        }
+
+        previousScroll = currentScroll;
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+
+  <!-- Navigation bar -->
+
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">E-Circuit <img src="E-Circuit logo.png" width="35"></a>
+      <a href="index.html"><button type="button" class="btn btn-outline-light" role="link">Home</button></a>
+      <a href="projects.html"><button type="button" class="btn btn-outline-light" role="link">Projects</button></a>
+      <a href="learn.html"><button type="button" class="btn btn-outline-light" role="link">Learn</button></a>
+      <a href="components.html"><button type="button" class="btn btn-outline-light" role="link">Components</button></a>
+      <a href="datasheet.html"><button type="button" class="btn btn-outline-light" role="link">Datasheets</button></a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <button type="button" class="btn btn-outline-light">
+            Guides
+          </button>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="chatbox1.html">Chat-Box</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="#">Collaborate</a></li>
+        </ul>
+      </li>
+      <a href="login.html"><button type="button" class="btn btn-outline-light" role="link">Login/Register</button></a>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">E-Circuit</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="datasheet.html">Datasheets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="components.html">Components</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="learn.html">Learn</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Guides
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="chatbox1.html">Chat-Box</a></li>
+                <li><a class="dropdown-item" href="#">Collaborate</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">More</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login/Register</a>
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- cards -->
+  <br><br><br>
+  <div class="card-container">
+    <!-- Row 1 -->
+    <div class="card">
+      <img src="accelerometer.webp" alt="Card 1">
+      <div class="card-content">
+        <h3>Accelerometer</h3>
+        <p>Definition: An accelerometer is a sensor that measures the acceleration of an object. It can detect
+          changes
+          in velocity in various directions.<br>
+          <br>Uses: Accelerometers are commonly used in devices like smartphones for screen orientation, gaming
+          controllers,
+          and inertial navigation systems. They are also used in industrial applications for monitoring and control.
+        </p><br><br>
+        <div class="button-container">
+          <a href="https://en.wikipedia.org/wiki/Accelerometer" class="button">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="amplifier.jpg" alt="Card 2">
+      <div class="card-content">
+        <h3>Amplifier</h3>
+        <p>Definition: An amplifier is an electronic device that increases the amplitude (voltage, current, or power) of
+          a signal. It amplifies the input signal without changing its other characteristics.<br>
+          <br>Uses: Amplifiers are used in audio systems, radio frequency (RF) communication, television broadcasting,
+          and
+          various electronic systems where signal strength needs to be boosted.
+        </p><br>
+        <div class="button-container">
+          <a href="https://en.wikipedia.org/wiki/amplifier" class="button">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="antenna.jpg" alt="Card 3">
+      <div class="card-content">
+        <h3>Antenna</h3>
+        <p>Definition: An antenna is a transducer that converts electrical signals into radio waves and vice versa. It
+          is used for transmitting and receiving electromagnetic waves.<br>
+          <br>Uses: Antennas are essential components in radio and television broadcasting, WiFi communication, cellular
+          networks, satellite communication, and various wireless systems.
+        </p><br><br>
+        <div class="button-container">
+          <a href="https://en.wikipedia.org/wiki/antenna" class="button">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Barometer.jpg" alt="Card 4">
+      <div class="card-content">
+        <h3>Barometer</h3>
+        <p>Definition: A barometer is a sensor that measures atmospheric pressure. It is commonly used to predict
+          weather changes.<br>
+          <br>Uses: Barometers are employed in meteorology for weather forecasting. They are also used in altimeters for
+          measuring altitude based on atmospheric pressure.
+        </p><br><br><br><br><br>
+        <div class="button-container">
+          <a href="https://en.wikipedia.org/wiki/barometer" class="button">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- Row 2 -->
+    <div class="card">
+      <img src="battery.jpg" alt="Card 5">
+      <div class="card-content">
+        <h3>Battery</h3>
+        <p>Definition: A battery is a device that stores electrical energy in chemical form and releases it as
+          electrical energy when needed.<br>
+          <br>Uses: Batteries are used to power a wide range of electronic devices, including smartphones, laptops,
+          cameras,
+          electric vehicles, and various portable gadgets..
+        </p><br><br><br>
+        <div class="button-container">
+          <a href="https://en.wikipedia.org/wiki/battery" class="button">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Breadboard.jpg" alt="Card 6">
+      <div class="card-content">
+        <h3>Breadboard</h3>
+        <p>Definition: A breadboard is a prototyping board used for building and testing electronic circuits without
+          soldering. It has a grid of holes where components and wires can be inserted.<br>
+          <br>Uses: Breadboards are widely used by electronics enthusiasts, students, and engineers for rapid
+          prototyping
+          and testing of circuit designs before permanent soldering
+        </p><br>
+        <div class="button-container">
+          <a href="https://en.wikipedia.org/wiki/breadboard" class="button">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Bridge Rectifier.jpg" alt="Card 7">
+      <div class="card-content">
+        <h3>Bridge Rectifier</h3>
+        <p>Definition: A bridge rectifier is an arrangement of diodes that converts alternating current (AC) into direct
+          current (DC).<br>
+          <br>Uses: Bridge rectifiers are used in power supplies to convert AC power from the mains into a form suitable
+          for
+          powering electronic devices, where a steady DC voltage is required.
+        </p><br><br><br>
+        <div class="button-container">
+          <a href="https://en.wikipedia.org/wiki/Bridge_rectifier" class="button">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Crystal Oscillator.jpg" alt="Card 8">
+      <div class="card-content">
+        <h3>Crystal Oscillator</h3>
+        <p>Definition: A crystal oscillator is an electronic circuit that uses the mechanical resonance of a vibrating
+          crystal to generate a precise frequency.<br>
+          <br>Uses: Crystal oscillators are used in timing circuits of microcontrollers, computers, communication
+          systems,
+          and various electronic devices where accurate and stable timing is crucial.
+        </p><br>
+        <div class="button-container">
+          <a href="https://en.wikipedia.org/wiki/Crystal_oscillator" class="button">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+   <!-- footer -->
+
+   <footer>
+    <div class="footer-section">
+      <a href="..."><button type="button" class="btn btn-outline-light" role="link">something</button></a>
+    </div>
+    <div class="footer-section">
+      <a href="..."><button type="button" class="btn btn-outline-light" role="link">Contact Us</button>
+        <p>Email: E-Circuit@gmail.com</p>
+      </a>
+    </div>
+    <div class="footer-section">
+      <a href="..."><button type="button" class="btn btn-outline-light" role="link">About Us</button></a>
+
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+
+
+</body>
+
+</html>

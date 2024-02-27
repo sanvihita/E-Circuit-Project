@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ar" dir="ltr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous">
+
+    <title>Projects</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #0f0e0e;
+        color: #111111;
+      }
+  
+      footer {
+        background-color: #0a0a0c;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+      }
+  
+      footer a {
+        color: #fff;
+        text-decoration: none;
+      }
+  
+      footer a:hover {
+        text-decoration: underline;
+      }
+  
+      .footer-section {
+        margin-bottom: 20px;
+      }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var previousScroll = 0;
+ 
+            $(window).scroll(function() {
+                var currentScroll = $(this).scrollTop();
+ 
+                if (currentScroll > previousScroll) {
+                    // Scrolling down
+                    $(".navbar").css("top", "-60px"); // Adjust the value as needed
+                } else {
+                    // Scrolling up
+                    $(".navbar").css("top", "0");
+                }
+ 
+                previousScroll = currentScroll;
+            });
+        });
+    </script>
+</head>
+
+<body>
+ 
+ <!-- Navigation bar -->
+ <nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+    aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <a class="navbar-brand" href="#">E-Circuit <img src="E-Circuit logo.png" width="35"></a>
+    <a href="index.html"><button type="button" class="btn btn-outline-light" role="link">Home</button></a>
+    <a href="projects.html"><button type="button" class="btn btn-outline-light" role="link">Projects</button></a>
+    <a href="learn.html"><button type="button" class="btn btn-outline-light" role="link">Learn</button></a>
+    <a href="components.html"><button type="button" class="btn btn-outline-light" role="link">Components</button></a>
+    <a href="datasheet.html"><button type="button" class="btn btn-outline-light" role="link">Datasheets</button></a>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      <button type="button" class="btn btn-outline-light">
+        Guides
+        </button>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="chatbox1.html">Chat-Box</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Collaborate</a></li>
+      </ul>
+    </li>
+    <a href="login.html"><button type="button" class="btn btn-outline-light" role="link">Login/Register</button></a>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+      aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">E-Circuit</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+          aria-label="Close"></button>    </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="datasheet.html">Datasheets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="components.html">Components</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="learn.html">Learn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">Projects</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Guides
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="chatbox1.html">Chat-Box</a></li>
+              <li><a class="dropdown-item" href="#">Collaborate</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">More</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login/Register</a>
+          </li>
+        </ul>
+        <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav> <br><br><br>
+    
+<!-- projects  -->
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <!-- project 1 -->
+  <div class="col">
+    <div class="card">
+      <img src="https://circuit-diagramz.com/wp-content/uploads/2021/09/Water-Level-Controller-using-8051-Microcontroller-Image-2-760x440-1.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">8051 Water Level Controller: Smart Tank Management</h5>
+        <p class="card-text">Experience automated water level control with our 8051 microcontroller-based system. Effortlessly manage tank levels for optimal water usage in both industrial and household settings. Embrace efficiency and conservation with our innovative solution.</p>
+        <a class="btn btn-primary" href="https://www.electronicshub.org/water-level-controller-using-8051-microcontroller/" role="button">Link</a>
+      </div>
+    </div>
+      
+  </div>
+  <!-- project 2 -->
+  <div class="col">
+    <div class="card">
+      <img src="https://hacksterio.s3.amazonaws.com/uploads/attachments/1104259/how_to_make_a_car_parking_system_using_arduino_and_ir_sensor_O0boM6tIrJ.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Infrared Parking Alarm Circuit: Drive Safely with Obstacle Detection</h5>
+        <p class="card-text">Enhance parking safety with our infrared sensor-based circuit, alerting drivers to obstacles during parking or reverse maneuvers. A practical solution for real-life safety concerns.</p>
+        <a class="btn btn-primary" href="https://www.electronicshub.org/car-parking-guard-circuit-using-infrared-sensor/" role="button">Link</a>
+      </div>
+    </div>
+  </div>
+    <!-- project 3 -->
+  <div class="col">
+    <div class="card">
+      <img src="https://www.electronicshub.org/wp-content/uploads/2015/09/Cell-Phone-Detector-Circuit-Image-1.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Cell Phone Detector</h5>
+        <p class="card-text">This is a simple circuit which helps to detect the presence of an activated cell phone by detecting the signals in the frequency range of 0.9 to 3GHz. It helps in mobile phones tracking which are used for spying.
+        </p>
+        <a class="btn btn-primary" href="" role="button">Link</a>
+      </div>
+    </div>
+  </div>
+    <!-- project 4 -->
+  <div class="col">
+    <div class="card">
+      <img src="https://circuit-diagramz.com/wp-content/uploads/2021/09/Bidirectional-Visitor-Counter-using-8051-Image-5-760x440-1.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bidirectional Visitor Counter using 8051</h5>
+        <p class="card-text">This Bidrectional Visitor Counter Circuit is helpful to count the number of persons entering or leaving a room and to display it on a screen.</p>
+        <a class="btn btn-primary" href="" role="button">Link</a>
+      </div>
+
+    </div>
+  </div>
+  <!-- project 5 -->
+  <div class="col">
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/76/d4/df/76d4df7ff0a30b2d351b5b4276233881.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Password based Circuit Breaker</h5>
+        <p class="card-text">This password based circuit breaker project is built using 8051 controller and is used to switch off the power supply to the line by entering a password.</p>
+        <a class="btn btn-primary" href="https://www.electronicshub.org/password-based-circuit-breaker/" role="button">Link</a>
+      </div>
+
+    </div>
+  </div>
+  <!-- Project 6 -->
+  <div class="col">
+    <div class="card">
+      <img src="https://i.pinimg.com/originals/ad/c0/1d/adc01d245ad9c401a2b3f2aecc5834c7.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Temperature Controlled DC Fan using Microcontroller</h5>
+        <p class="card-text">This password based circuit breaker project is built using 8051 controller and is used to switch off the power supply to the line by entering a password.</p>
+        <a class="btn btn-primary" href="https://www.electronicshub.org/password-based-circuit-breaker/" role="button">Link</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+</br></br></br>
+
+<!-- footer -->
+<footer>
+  <div class="footer-section">
+    <a href="..."><button type="button" class="btn btn-outline-light" role="link">something</button></a>
+  </div>
+  <div class="footer-section">
+    <a href="..."><button type="button" class="btn btn-outline-light" role="link">Contact Us</button>
+      <p>Email: E-Circuit@gmail.com</p>
+    </a>
+  </div>
+  <div class="footer-section">
+    <a href="..."><button type="button" class="btn btn-outline-light" role="link">About Us</button></a>
+
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+     
+
+</body>
+
+</html>
